@@ -1,5 +1,5 @@
 config,pointer_hops,time_ms
-none,49995000,115.239
-path_compression_only,19997,0.770
-union_by_size_only,19996,0.600
-both,19996,0.759
+none,49995000,112.832
+path_compression_only,19997,0.608
+union_by_size_only,19996,0.457
+both,19996,0.713

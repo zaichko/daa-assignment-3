@@ -53,7 +53,7 @@ public class DSU {
         int rootA = find(a);
         int rootB = find(b);
 
-        if (find(rootA) == find(rootB)){
+        if (rootA == rootB){
             return false;
         }
 
