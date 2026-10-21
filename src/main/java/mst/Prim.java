@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class Prim {
+public final class Prim {
     private Prim(){}
 
     public static MSTResult run(Graph graph){

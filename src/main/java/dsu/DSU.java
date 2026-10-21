@@ -8,6 +8,8 @@ public class DSU {
     private int components;
 
     public long findCalls;
+    public long unionCalls;
+    public long pointerHops;
 
     public DSU(int n, boolean pathCompression, boolean unionBySize){
         this.parent = new int[n];
@@ -17,6 +19,7 @@ public class DSU {
         this.components = n;
 
         for (int i = 0; i < n; i++){
+            parent[i] = i;
             size[i] = 1;
         }
     }
@@ -31,6 +34,7 @@ public class DSU {
 
         while (parent[root] != root){
             root = parent[root];
+            pointerHops++;
         }
 
         if (pathCompression){
@@ -45,10 +49,11 @@ public class DSU {
     }
 
     public boolean union(int a, int b){
+        unionCalls++;
         int rootA = find(a);
         int rootB = find(b);
 
-        if (connected(a, b)){
+        if (find(rootA) == find(rootB)){
             return false;
         }
 

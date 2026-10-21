@@ -7,7 +7,7 @@ import graph.Graph;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Kruskal {
+public final class Kruskal {
     private Kruskal(){}
 
     public static MSTResult run(Graph graph){
